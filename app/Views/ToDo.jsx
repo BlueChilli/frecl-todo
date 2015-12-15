@@ -8,11 +8,11 @@ import ToggleAll from "../Components/ToggleAll.jsx";
 const ToDoMain = React.createClass({
   getFilteredItems(){
     switch (this.props.params.splat) {
-      case 'ToDo/all':
+      case 'all':
         return this.props.ToDos;
-      case 'ToDo/completed':
+      case 'completed':
         return this.props.ToDos.filter(todo => todo.get('completed'));
-      case 'ToDo/active':
+      case 'active':
         return this.props.ToDos.filter(todo => !todo.get('completed'));
       default:
         return this.props.ToDos;
@@ -27,7 +27,7 @@ const ToDoMain = React.createClass({
             <ToggleAll dispatch={this.props.dispatch} ToDos={this.getFilteredItems()}/>
             <ToDoList dispatch={this.props.dispatch} ToDos={this.getFilteredItems()}/>
           </section>
-          <Footer dispatch={this.props.dispatch} ToDos={this.props.ToDos}/>
+          <Footer dispatch={this.props.dispatch} basePath="ToDo" ToDos={this.props.ToDos}/>
         </section>
         <footer className="info">
           <p>Double-click to edit a todo</p>

@@ -31,9 +31,11 @@ export default React.createClass({
             <Router history={appHistory} onUpdate={this.handleRouterUpdate}>
                 <Route component={Container}>
                     <Route path="/" component={BackEnd}/>
-                    <Route path="/Designer" component={Designer}/>
+                    <Route path="/Designer" component={Designer}>
+                      <Route path="*" component={Designer}/>
+                    </Route>
                     <Route path="/ToDo">
-                      <Route path="/*" component={ToDo}/>
+                      <Route path="*" component={ToDo}/>
                     </Route>
                     <Route path="/style-guide" component={StyleGuide}/>
                 </Route>

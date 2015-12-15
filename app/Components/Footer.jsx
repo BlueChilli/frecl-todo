@@ -15,13 +15,13 @@ export default React.createClass({
         <span className="todo-count"><strong>{completedTodos.count()}</strong> {completedTodos.count() > 1 || completedTodos.count() === 0 ? "items" : "item"} left</span>
         <ul className="filters">
           <li>
-            <Link activeClassName="selected" to="/ToDo/all">All</Link>
+            <Link activeClassName="selected" to={"/" + this.props.basePath + "/all"}>All</Link>
           </li>
           <li>
-            <Link activeClassName="selected" to="/ToDo/active">Active</Link>
+            <Link activeClassName="selected" to={"/" + this.props.basePath + "/active"}>Active</Link>
           </li>
           <li>
-            <Link activeClassName="selected" to="/ToDo/completed">Completed</Link>
+            <Link activeClassName="selected" to={"/" + this.props.basePath + "/completed"}>Completed</Link>
           </li>
         </ul>
         <button onClick={this.clearCompleted} className="clear-completed">Clear completed</button>
