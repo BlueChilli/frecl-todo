@@ -1,0 +1,17 @@
+@import "../../Styles/extends";
+
+.radio-tabs {
+  @extend .clearfix;
+  display: inline-block;
+}
+
+.radio-tab {
+  float: left;
+  margin-bottom: 0;
+  .box {
+    display: none !important;
+  }
+  label {
+    display: block;
+  }
+}

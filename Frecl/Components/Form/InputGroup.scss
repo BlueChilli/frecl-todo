@@ -1,0 +1,26 @@
+.input-group {
+  position: relative;
+  background-color: white;
+  .input-prepend, .input-append {
+    display: inline-block;
+    width: 44px;
+    line-height: 44px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    text-align: center;
+  }
+  .input-append {
+    right: 0;
+  }
+  .input-prepend {
+    left: 0;
+  }
+  input {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+  }
+}

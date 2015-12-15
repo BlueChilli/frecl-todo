@@ -1,0 +1,8 @@
+import React from "react";
+import './style.scss';
+
+export default (
+    <div className="flower-loader">
+        Loading ...
+    </div>
+);

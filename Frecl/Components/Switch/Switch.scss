@@ -1,0 +1,21 @@
+.switch {
+  display: block;
+  user-select: none;
+  label:hover {
+    cursor: pointer;
+  }
+  label .box {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  input[type=checkbox],
+  input[type=radio] {
+    display: none;
+  }
+}
+
+.checkbox, .radio{
+  label .box{
+    margin-right: 5px;
+  }
+}

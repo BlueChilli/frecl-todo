@@ -1,0 +1,19 @@
+{
+    "ecmaFeatures": {
+        "jsx": true,
+        "modules": true,
+    },
+    "env": {
+    	"es6": true
+    },
+    rules: {
+        "object-shorthand": [2, "always"],
+        "new-cap": false
+    },
+    "plugins": [
+        "react"
+    ],
+    "globals": {
+        "__dirname": true
+    }
+}

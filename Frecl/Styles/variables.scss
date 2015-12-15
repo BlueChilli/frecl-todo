@@ -1,0 +1,17 @@
+$base-font-size: 16px !default;
+
+$grid-cols: 12;
+
+// Breakpoints
+
+$mobile: 520px;
+$mobile-only: max-width 519px;
+
+$tablet: 800px;
+$tablet-only: $mobile 799px;
+
+// Unused atm
+$desktop: 1200px;
+
+//Width of the header on the responsive table
+$responsive-table-header: 45%;

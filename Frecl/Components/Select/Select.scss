@@ -1,0 +1,46 @@
+.styled-select {
+  max-width: 300px;
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative;
+  .arrow {
+    content: '';
+    display: block;
+    bottom: -1px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  select {
+    -webkit-appearance: none;
+    appearance: none;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 0 0 10px;
+    line-height: 1;
+    vertical-align: middle;
+    z-index: 100;
+    &:focus {
+      outline: 0;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+select::-ms-expand {
+  display: none;
+}

@@ -1,0 +1,1 @@
+<Spinner type={inlineFlower} id="demo2"/>
