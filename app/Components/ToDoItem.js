@@ -46,9 +46,9 @@ export default React.createClass({
     return (
       <li className={classes}>
         <div className="view">
-          <input className="toggle" onChange={this.toggleTodo} type="checkbox" checked={this.props.Item.get('completed')}/>
+          <input title={"Toggle " + this.props.Item.get('text')} className="toggle" onChange={this.toggleTodo} type="checkbox" checked={this.props.Item.get('completed')}/>
             <label onDoubleClick={this.showEditDialogue}>{this.props.Item.get('text')}</label>
-          <button onClick={this.deleteTodo} className="destroy"></button>
+          <button onClick={this.deleteTodo} title="Delete todo" className="destroy"></button>
         </div>
         <input ref={this.getEditRef()} onKeyPress={this.closeEditTodo} onChange={this.editTodo} onBlur={this.cancelEdit} className="edit" value={this.props.Item.get('text')}/>
       </li>
