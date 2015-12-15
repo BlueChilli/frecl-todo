@@ -20,7 +20,7 @@ const ToDoMain = React.createClass({
   },
   render() {
     return (
-      <div className="shanes-todo">
+      <div>
         <section className="todoapp">
           <Header dispatch={this.props.dispatch}/>
           <section className="main">

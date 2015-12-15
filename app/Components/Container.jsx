@@ -7,10 +7,9 @@ export default React.createClass({
             <div>
                 <nav>
                     <ul>
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/about">About</Link></li>
-                        <li><Link to="/style-guide">Style Guide</Link></li>
-                        <li><Link to="/doc">Docs</Link></li>
+                        <li><Link to="/">BackEnd ToDo</Link></li>
+                        <li><Link to="/Designer">Designer ToDo</Link></li>
+                        <li><Link to="/ToDo/All">Shane's Todo</Link></li>
                     </ul>
                 </nav>
                 <div className="container">
@@ -21,4 +20,3 @@ export default React.createClass({
         );
     }
 });
-

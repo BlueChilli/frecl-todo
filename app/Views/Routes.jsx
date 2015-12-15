@@ -2,18 +2,11 @@ import React from "react";
 import {Router, Route} from "react-router";
 import createBrowserHistory from 'history/lib/createBrowserHistory';
 import Container from "../Components/Container.jsx";
-import Home from './Home.jsx';
+import BackEnd from './BackEnd.jsx';
+import Designer from './Designer.jsx';
 import ToDo from './ToDo.jsx';
 import StyleGuide from '../../Frecl/StyleGuide/style-guide.jsx';
 import ga from "../Helpers/GoogleAnalytics";
-
-
-// Documentation Imports
-// (This prob should be somewhere else)
-
-import DocHome from './../../doc/Views/Home.jsx';
-import DocShowComponent from './../../doc/Views/Component.jsx';
-import Doc from './../../doc/Views/Layout.jsx';
 
 var appHistory = createBrowserHistory();
 
@@ -36,16 +29,13 @@ export default React.createClass({
     render() {
         return (
             <Router history={appHistory} onUpdate={this.handleRouterUpdate}>
-                <Route>
-                    <Route path="/" component={Home}/>
+                <Route component={Container}>
+                    <Route path="/" component={BackEnd}/>
+                    <Route path="/Designer" component={Designer}/>
                     <Route path="/ToDo">
                       <Route path="/*" component={ToDo}/>
                     </Route>
                     <Route path="/style-guide" component={StyleGuide}/>
-                </Route>
-                <Route component={Doc}>
-                    <Route path="doc" component={DocHome}/>
-                    <Route path="doc/component/:name(/:tab)" component={DocShowComponent}/>
                 </Route>
             </Router>
         );
