@@ -10,9 +10,14 @@ export default React.createClass({
     const completedTodos = this.props.ToDos.filter(todo => {
       return !todo.get('completed');
     });
+    const completedCount = completedTodos.count();
+    const showClear = () => {
+      if(this.props.ToDos.count() - completedCount === 0) return null;
+      return <button onClick={this.clearCompleted} className="clear-completed">Clear completed</button>
+    }
     return (
       <footer className="footer">
-        <span className="todo-count"><strong>{completedTodos.count()}</strong> {completedTodos.count() > 1 || completedTodos.count() === 0 ? "items" : "item"} left</span>
+        <span className="todo-count"><strong>{completedCount}</strong> {completedCount > 1 || completedCount === 0 ? "items" : "item"} left</span>
         <ul className="filters">
           <li>
             <Link activeClassName="selected" to={"/" + this.props.basePath + "/all"}>All</Link>
@@ -24,7 +29,7 @@ export default React.createClass({
             <Link activeClassName="selected" to={"/" + this.props.basePath + "/completed"}>Completed</Link>
           </li>
         </ul>
-        <button onClick={this.clearCompleted} className="clear-completed">Clear completed</button>
+        {showClear()}
       </footer>
     );
   }
