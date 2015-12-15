@@ -1,9 +1,9 @@
 import React from "react";
 import {connect} from "react-redux";
-import Header from "../Components/Header.jsx";
-import Footer from "../Components/Footer.jsx";
-import ToDoList from "../Components/ToDoList.jsx";
-import ToggleAll from "../Components/ToggleAll.jsx";
+import Header from "../ShanesComponents/Header.jsx";
+import Footer from "../ShanesComponents/Footer.jsx";
+import ToDoList from "../ShanesComponents/ToDoList.jsx";
+import ToggleAll from "../ShanesComponents/ToggleAll.jsx";
 
 const ToDoMain = React.createClass({
   getFilteredItems(){
